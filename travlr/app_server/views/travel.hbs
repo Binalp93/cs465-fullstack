@@ -1,0 +1,16 @@
+<main id="main">
+  <h1>Travel</h1>
+  {{#each trips}}
+  <article class="trip">
+    <img src="/images/{{this.image}}" alt="{{this.name}}">
+    <h2>{{this.name}}</h2>
+    <ul>
+      <li><strong>Trip code:</strong> {{this.code}}</li>
+      <li><strong>Length:</strong> {{this.length}}</li>
+      <li><strong>Resort:</strong> {{this.resort}}</li>
+      <li><strong>Price:</strong> ${{this.perPerson}} per person</li>
+    </ul>
+    {{{this.description}}}
+  </article>
+  {{/each}}
+</main>
