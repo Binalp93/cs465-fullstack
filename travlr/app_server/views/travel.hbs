@@ -1,16 +1,18 @@
-<main id="main">
-  <h1>Travel</h1>
-  {{#each trips}}
-  <article class="trip">
-    <img src="/images/{{this.image}}" alt="{{this.name}}">
-    <h2>{{this.name}}</h2>
-    <ul>
-      <li><strong>Trip code:</strong> {{this.code}}</li>
-      <li><strong>Length:</strong> {{this.length}}</li>
-      <li><strong>Resort:</strong> {{this.resort}}</li>
-      <li><strong>Price:</strong> ${{this.perPerson}} per person</li>
-    </ul>
-    {{{this.description}}}
-  </article>
-  {{/each}}
-</main>
+<div id="contents">
+	<div class="box">
+		<div>
+			<div class="body">
+				<h1>Travel</h1>
+				<ul id="sites">
+					{{#each trips}}
+					<li>
+						<a href="/travel"><img src="/images/{{this.image}}" alt="{{this.name}}"></a>
+						<h2><a href="/travel">{{this.name}}</a></h2>
+						{{{this.description}}}
+					</li>
+					{{/each}}
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
